@@ -22,11 +22,11 @@ const Navbar = () => {
     <div>
       <header className={`header-section style-4 ${headerFixed ? 'header-fixed fadeInUp' : ''}`}>
         {/* the header top  */}
-        <div className={`header-top ${socialToggle ? 'open' : ''}`}>
+        <div className={`header-top d-md-none ${socialToggle ? 'open' : ''}`}>
             <div className='container'>
                 <div className='header-top-area'>
                     <Link to='/signup' className='lab-btn me-3'><span>Create Account</span></Link>
-                    <Link to='/login'>Login</Link>
+                    <Link to='/login' className=''>Login</Link>
                 </div>
             </div>
         </div>
@@ -44,13 +44,31 @@ const Navbar = () => {
                 </div>
                 <div className='menu-area'>
                     <div className='menu'>
-                        <ul className='lab-ul'>
+                        <ul className={`lab-ul ${menuToggle ? 'active' : ''}`}>
                             <li><Link to='/'>Home</Link></li>
                             <li><Link to='/shop'>Shop</Link></li>
                             <li><Link to='/about'>About</Link></li>
                             <li><Link to='/contact'>Contact</Link></li>
                         </ul>
                     </div>
+
+                    {/* sign in and login  */}
+
+                    <Link to='/sign-up' className='lab-btn me-3 d-none d-md-block'>Create Account</Link>
+                    <Link to='/login' className='d-none d-md-block'>Login</Link>
+
+                    {/* the menu toggler */}
+                    <div onClick={() => setMenuToggle(!menuToggle)} className={`header-bar d-lg-none ${menuToggle ? 'active' : ''}` }>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    {/* the social toggler  */}
+                    <div onClick={() => setSocialToggle(!socialToggle)} className='ellepsis-bar d-md-none'>
+                        <i className="icofont-info"></i>
+                    </div>
+
                 </div>
 
                 </div>
