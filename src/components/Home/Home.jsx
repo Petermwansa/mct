@@ -1,13 +1,15 @@
 import React from 'react'
 import Banner from './Banner'
 import HomeCategory from './HomeCategory'
+import { createPortal } from 'react-dom'
 
 const Home = () => {
-  return (
+  return createPortal(
     <div>
         <Banner />
         <HomeCategory />
-    </div>
+    </div>,
+    document.getElementById('home')
   )
 }
 
