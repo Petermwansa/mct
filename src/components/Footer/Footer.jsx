@@ -213,7 +213,7 @@ const Footer = () => {
       <div className='footer-bottom'>
         <div className='container'>
            <div className='section-wrapper'>
-             <p>{year}<Link to='/'>MCT</Link>Designed by <a href='/' target='_blank'>Rockie Tech</a></p>
+             <p>{year}<Link to='/shop'>MCT</Link>Designed by <a href='/' target='_blank'>Rockie Tech</a></p>
              <div className='footer-bottom-list'>
                 {
                     footerbottomList.map((val, i) => (

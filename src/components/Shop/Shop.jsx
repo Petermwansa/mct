@@ -1,0 +1,13 @@
+import React from 'react';
+import PageHeader from '../PageHeader/PageHeader';
+
+
+const Shop = () => {
+  return (
+    <div>
+      <PageHeader title="Our Shop Page" curPage='Shop'/>
+    </div>
+  )
+}
+
+export default Shop
