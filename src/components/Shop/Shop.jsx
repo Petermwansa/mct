@@ -3,6 +3,7 @@ import PageHeader from '../PageHeader/PageHeader';
 import Data from '../../products.json';
 import ProductCard from './ProductCard';
 import Pagination from './Pagination';
+import Search from './Search';
 
 const showResults = "Showing 01 - 12 of 139 results"
 
@@ -33,7 +34,7 @@ const Shop = () => {
             <div className='row justify-content-center'>
               <div className='col-lg-8 col-12'>
                   <article>
-                  {/* laytout and title  */}
+                    {/* laytout and title  */}
                     <div className='shop-title d-flex flex-wrap justify-content-between'>
                       <p>{showResults}</p>
                       <div className={`product-view-mode ${gridList ? 'gridActive' : 'listActive'}`}>
@@ -58,7 +59,9 @@ const Shop = () => {
                   </article>
               </div>
               <div className='col-lg-4 col-12'>
-                  right
+                  <aside>
+                    <Search products={products} gridList={gridList}/>
+                  </aside>
               </div>
             </div>
           </div>
