@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Data from '../../products.json';
 
 const ShopCategory = ({filterItem, setItem, menuItems, setProducts, selectedCategory}) => {

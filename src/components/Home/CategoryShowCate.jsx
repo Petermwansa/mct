@@ -6,9 +6,6 @@ import img2 from '../../assets/images/categoryTab/02.jpg';
 import img3 from '../../assets/images/categoryTab/03.jpg';
 import img4 from '../../assets/images/categoryTab/04.jpg';
 import img5 from '../../assets/images/categoryTab/05.jpg';
-import img6 from '../../assets/images/categoryTab/06.jpg';
-import img7 from '../../assets/images/categoryTab/07.jpg';
-import img8 from '../../assets/images/categoryTab/08.jpg';
 import { Link } from 'react-router-dom';
 
 const title = "Our Products";
@@ -58,34 +55,7 @@ const ProductData = [
     brand: 'Nike',
     price: '$199.00',
     id: 5,
-},
-{
-    imgUrl: img6,
-    cate: 'Beauty',
-    title: 'COSRX Snail Mucin',
-    author: 'assets/images/course/author/06.jpg',
-    brand: 'Zaara',
-    price: '$199.00',
-    id: 6,
-},
-{
-    imgUrl: img7,
-    cate: 'Bags',
-    title: 'Look Less Chanel Bag ',
-    author: 'assets/images/course/author/01.jpg',
-    brand: 'Gucci',
-    price: '$199.00',
-    id: 7,
-},
-{
-    imgUrl: img8,
-    cate: 'Shoes',
-    title: 'Casual Sneakers',
-    author: 'assets/images/course/author/02.jpg',
-    brand: 'Bata',
-    price: '$199.00',
-    id: 8,
-},
+}
 ]
 
 
