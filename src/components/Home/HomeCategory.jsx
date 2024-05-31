@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import image1 from '../../assets/images/category/01.jpg';
-import image2 from '../../assets/images/category/02.jpg';
-import image3 from '../../assets/images/category/03.jpg';
-import image4 from '../../assets/images/category/04.jpg';
-import image5 from '../../assets/images/category/05.jpg';
-import image6 from '../../assets/images/category/06.jpg';
+import image1 from '../../assets/images/category/daniel-romero-0D4mQTdGNHs-unsplash.jpg';
+import image2 from '../../assets/images/category/laptops.jpeg';
+import image3 from '../../assets/images/category/tablets.jpeg';
+import image4 from '../../assets/images/category/watches.jpeg';
+import image5 from '../../assets/images/category/airpods.jpeg';
+import image6 from '../../assets/images/category/headsets.jpeg';
+import image7 from '../../assets/images/category/magsafe.jpeg';
 
 
 const subTitle = "Choose Any Products";
@@ -18,43 +19,50 @@ const categoryList = [
     imgUrl: image1,
     imgAlt: 'category rajibraj91 rajibraj',
     iconName: 'icofont-brand-windows',
-    title: 'DSLR Camera',
+    title: 'Phones',
 },
 {
     id: 'adfefbdfbvdsfbv',
     imgUrl: image2,
     imgAlt: 'category rajibraj91 rajibraj',
     iconName: 'icofont-brand-windows',
-    title: 'Shoes',
+    title: 'Laptops',
 },
 {
     id: 'adfefbdbgbdfdsghcvdjhbvdsfbv',
     imgUrl: image3,
     imgAlt: 'category rajibraj91 rajibraj',
     iconName: 'icofont-brand-windows',
-    title: 'Photography',
+    title: 'Tablets',
 },
 {
     id: 'adfefbdbg23454kbdfbvdsfbv',
     imgUrl: image4,
     imgAlt: 'category rajibraj91 rajibraj',
     iconName: 'icofont-brand-windows',
-    title: 'Formal Dress',
+    title: 'Watches',
 },
 {
     id: 'adfefbdbgbdfbvdscdkjcnb34sfbv',
     imgUrl: image5,
     imgAlt: 'category rajibraj91 rajibraj',
     iconName: 'icofont-brand-windows',
-    title: 'Colorful Bags',
+    title: 'AirPods',
 },
 {
     id: 'adfefbdbgbdfbvd35vfvsfbv',
     imgUrl: image6,
     imgAlt: 'category rajibraj91 rajibraj',
     iconName: 'icofont-brand-windows',
-    title: 'Home Decor',
+    title: 'HeadSets',
 },
+{
+    id: 'adfefbdbgbdfbvdscdkjcnb34sfbv',
+    imgUrl: image7,
+    imgAlt: 'category rajibraj91 rajibraj',
+    iconName: 'icofont-brand-windows',
+    title: 'Pencils',
+}
 ]
 
 

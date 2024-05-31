@@ -6,6 +6,7 @@ const title = (
 )
 const desc = 'Time is Limited. Hurry Up!';
 
+
 const Register = () => {
   return (
     <section className='register-section padding-tb pb-0'>
