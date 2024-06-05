@@ -22,22 +22,7 @@ import image6 from '../../assets/images/sponsor/06.png';
 const sponsorList = [
     {
         imgUrl: image1
-    },
-    {
-        imgUrl: image2
-    },
-    {
-        imgUrl: image3
-    },
-    {
-        imgUrl: image4
-    },
-    {
-        imgUrl: image5
-    },
-    {
-        imgUrl: image6
-    },
+    }
     ];
 
 const Brands = () => {

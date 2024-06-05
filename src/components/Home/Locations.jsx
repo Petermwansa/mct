@@ -5,7 +5,7 @@ import image1 from '../../assets/images/clients/avater.jpg';
 
 const title = 'Hundreds of Customers';
 
-const desc = "Buy products on your any device with our app & enjoy your time what you want. Just download & install & start to shopping";
+const desc = "Buy products from us from anywhere in the world";
 
 const clientsList = [
 {

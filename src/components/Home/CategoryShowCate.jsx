@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import icon1 from '../../assets/images/shape-img/icon/01.png';
 import icon2 from '../../assets/images/shape-img/icon/02.png';
-import img1 from '../../assets/images/categoryTab/01.jpg';
-import img2 from '../../assets/images/categoryTab/02.jpg';
-import img3 from '../../assets/images/categoryTab/03.jpg';
-import img4 from '../../assets/images/categoryTab/04.jpg';
-import img5 from '../../assets/images/categoryTab/05.jpg';
+import img1 from '../../assets/images/phones/iphone-15.jpeg'
+import img2 from '../../assets/images/laptops/dell.jpeg'
+import img3 from '../../assets/images/watches/2024-05-27 13.30.21.jpg';
+import img4 from '../../assets/images/pencils/2024-05-27 13.31.47.jpg';
 import { Link } from 'react-router-dom';
 
 const title = "Our Products";
@@ -13,26 +12,26 @@ const title = "Our Products";
 const ProductData = [
 {
     imgUrl: img1,
-    cate: 'Shoes',
-    title: 'Nike Premier X',
+    cate: 'Phones',
+    title: 'iPhone 15',
     author: 'assets/images/course/author/01.jpg',
-    brand: 'Nike',
+    brand: 'Apple',
     price: '$199.00',
     id: 1,
 },
 {
     imgUrl: img2,
-    cate: 'Bags',
-    title: 'Asthetic Bags',
+    cate: 'Laptops',
+    title: 'DELL',
     author: 'assets/images/course/author/02.jpg',
-    brand: 'D&J Bags',
+    brand: 'Dell',
     price: '$199.00',
     id: 2,
 },
 {
     imgUrl: img3,
-    cate: 'Phones',
-    title: 'iPhone 12',
+    cate: 'Watches',
+    title: 'Apple watch',
     author: 'src/assets/images/categoryTab/brand/apple.png',
     brand: 'Apple',
     price: '$199.00',
@@ -40,22 +39,13 @@ const ProductData = [
 },
 {
     imgUrl: img4,
-    cate: 'Bags',
-    title: 'Hiking Bag 15 Nh100',
+    cate: 'Pencils',
+    title: 'Apple Pencil 1',
     author: 'assets/images/course/author/04.jpg',
-    brand: 'Gucci',
+    brand: 'Apple',
     price: '$199.00',
     id: 4,
 },
-{
-    imgUrl: img5,
-    cate: 'Shoes',
-    title: 'Outdoor Sports Shoes',
-    author: 'assets/images/course/author/05.jpg',
-    brand: 'Nike',
-    price: '$199.00',
-    id: 5,
-}
 ]
 
 
@@ -89,10 +79,10 @@ const CategoryShowCate = () => {
             <div className='course-filter-group'>
                 <ul className='lab-ul'>
                     <li onClick={() => setItems(ProductData)}>All</li>
-                    <li onClick={() => filterItem('Shoes')}>Shoes</li>
-                    <li onClick={() => filterItem('Bags')}>Bags</li>
                     <li onClick={() => filterItem('Phones')}>Phones</li>
-                    <li onClick={() => filterItem('Beauty')}>Beauty</li>
+                    <li onClick={() => filterItem('Laptops')}>Laptops</li>
+                    <li onClick={() => filterItem('Watches')}>Smart Watches</li>
+                    <li onClick={() => filterItem('Pencils')}>Smart Pencils</li>
                 </ul>
             </div>
         </div>

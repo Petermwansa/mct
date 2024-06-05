@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 
 
 const title = "About ShopCart";
-const desc = "Eduaid theme number one world class university in the world There are student are studing always in this university for all time.";
+const desc = "Providing you with one of the best services out there on the market";
 const ItemTitle = "Categories";
 const quickTitle = "Quick Links";
 
 const addressList = [
     {
         iconName: 'icofont-google-map',
-        text: ' New York, USA.',
+        text: ' Lusaka Zambia.',
     },
     {
         iconName: 'icofont-phone',
@@ -18,7 +18,7 @@ const addressList = [
     },
     {
         iconName: 'icofont-envelope',
-        text: ' info@shopcart.com',
+        text: ' info@mctelecoms.com',
     },
 ]
 
@@ -60,10 +60,6 @@ const ItemList = [
         link: '/shop',
     },
     {
-        text: 'Blog',
-        link: '/blog',
-    },
-    {
         text: 'About',
         link: '/about',
     },
@@ -78,18 +74,6 @@ const ItemList = [
 ]
 
 const quickList = [
-    {
-        text: 'Summer Sessions',
-        link: '#',
-    },
-    {
-        text: 'Events',
-        link: '#',
-    },
-    {
-        text: 'Gallery',
-        link: '#',
-    },
     {
         text: 'Forums',
         link: '#',
