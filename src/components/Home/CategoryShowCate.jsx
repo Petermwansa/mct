@@ -14,7 +14,6 @@ const ProductData = [
     imgUrl: img1,
     cate: 'Phones',
     title: 'iPhone 15',
-    author: 'assets/images/course/author/01.jpg',
     brand: 'Apple',
     price: '$199.00',
     id: 1,
@@ -23,7 +22,6 @@ const ProductData = [
     imgUrl: img2,
     cate: 'Laptops',
     title: 'DELL',
-    author: 'assets/images/course/author/02.jpg',
     brand: 'Dell',
     price: '$199.00',
     id: 2,
@@ -32,7 +30,6 @@ const ProductData = [
     imgUrl: img3,
     cate: 'Watches',
     title: 'Apple watch',
-    author: 'src/assets/images/categoryTab/brand/apple.png',
     brand: 'Apple',
     price: '$199.00',
     id: 3,
@@ -41,7 +38,6 @@ const ProductData = [
     imgUrl: img4,
     cate: 'Pencils',
     title: 'Apple Pencil 1',
-    author: 'assets/images/course/author/04.jpg',
     brand: 'Apple',
     price: '$199.00',
     id: 4,
@@ -98,7 +94,7 @@ const CategoryShowCate = () => {
                                     <img src={product.imgUrl} alt='the product' />
                                     <div className='course-category'>
                                         <div className='course-cate'>
-                                            <a href='#'>{product.cate}</a>
+                                            <a href=''>{product.cate}</a>
                                         </div>
                                     </div>
                                 </div>

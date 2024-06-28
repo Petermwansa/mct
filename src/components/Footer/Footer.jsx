@@ -137,7 +137,7 @@ const Footer = () => {
                                         {
                                             socialList.map((val, i) => (
                                                 <li key={i}>
-                                                    <a href='#' className={val.className}><i className={val.iconName}>{val.text}</i></a>
+                                                    <a className={val.className}><i className={val.iconName}>{val.text}</i></a>
                                                 </li>
                                             ))
                                         }

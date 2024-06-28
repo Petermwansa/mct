@@ -311,7 +311,6 @@ const Shop = () => {
                       menuItems={menuItems} 
                       setProducts={setProducts} 
                       selectedCategory={selectedCategory}
-                      
                     />
                   </aside>
               </div>
