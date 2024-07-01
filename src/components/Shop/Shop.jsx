@@ -37,7 +37,7 @@ const Data = [
     quantity: 0
   },
   {
-    id: "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
+    id: "4e13b9-2d54-4b2f-a74d-a77b362d6ead",
     category: "laptops",
     name: "MacBook Pro 2023",
     seller: "Apple",
@@ -50,7 +50,7 @@ const Data = [
     quantity: 0
   },
   {
-    id: "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
+    id: "124e13b9-4b2f-a74d-a77b362d6ead",
     category: "laptops",
     name: "MacBook Pro 2023",
     seller: "Apple",
@@ -63,7 +63,7 @@ const Data = [
     quantity: 0
   },
   {
-    id: "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
+    id: "124e13b9-24-4b2f-a74d-a77b362d6ead",
     category: "Phones",
     name: "iPhone 15 Pro Max",
     seller: "Apple",
@@ -76,7 +76,7 @@ const Data = [
     quantity: 0
   },
   {
-    id: "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
+    id: "124e13b9-2d54-4b2f-a74d-a77b362dd",
     category: "Phones",
     name: "Samsung S23 Ultra",
     seller: "Samsung",
@@ -89,7 +89,7 @@ const Data = [
     quantity: 0
   },
   {
-    id: "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
+    id: "124e13b9-2d54-4b77b362d6ead",
     category: "Phones",
     name: "Huawei Pura 70 Ultra",
     seller: "Huawei",
@@ -102,7 +102,7 @@ const Data = [
     quantity: 0
   },
   {
-    id: "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
+    id: "124e13b9-2d5a74d-a77b362d6ead",
     category: "Watches",
     name: "Apple watch",
     seller: "Apple",
@@ -115,7 +115,7 @@ const Data = [
     quantity: 0
   },
   {
-    id: "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
+    id: "124e13b9-2d5477b362d6ead",
     category: "Watches",
     name: "Apple watch",
     seller: "Apple",
@@ -128,7 +128,7 @@ const Data = [
     quantity: 0
   },
   {
-    id: "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
+    id: "12-4b2f-a74d-a77b362d6ead",
     category: "Watches",
     name: "Apple watch",
     seller: "Apple",
@@ -154,7 +154,7 @@ const Data = [
     quantity: 0
   },
   {
-    id: "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
+    id: "124e134b2f-a74d-a77b362d6ead",
     category: "Watches",
     name: "Apple watch",
     seller: "Apple",
@@ -167,7 +167,7 @@ const Data = [
     quantity: 0
   },
   {
-    id: "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
+    id: "124e1b362d6ead",
     category: "Pencils",
     name: "Apple Pencil",
     seller: "Apple",
@@ -180,7 +180,7 @@ const Data = [
     quantity: 0
   },
   {
-    id: "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
+    id: "124e13b9-2d54-a77b362d6ead",
     category: "Pencils",
     name: "Apple Pencil",
     seller: "Apple",
@@ -193,7 +193,7 @@ const Data = [
     quantity: 0
   },
   {
-    id: "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
+    id: "124e13b9-2d54-47b362d6ead",
     category: "Pencils",
     name: "Apple Pencil",
     seller: "Apple",
@@ -206,7 +206,7 @@ const Data = [
     quantity: 0
   },
   {
-    id: "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
+    id: "124e13b9f-a74d-a77b362d6ead",
     category: "Pencils",
     name: "Apple Pencil",
     seller: "Apple",
@@ -219,7 +219,7 @@ const Data = [
     quantity: 0
   },
   {
-    id: "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
+    id: "124e13b9-2d-a77b362d6ead",
     category: "Pencils",
     name: "Apple Pencil",
     seller: "Apple",

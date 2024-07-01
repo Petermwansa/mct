@@ -17,6 +17,7 @@ import '././assets/css/style.min.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './components/Home/Home';
 import Shop from './components/Shop/Shop';
+import SingleProduct from './components/Shop/SingleProduct';
 
 
 const router = createBrowserRouter([
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: '/shop',
         element: <Shop />
+      },
+      {
+        path: '/shop/:id',
+        element: <SingleProduct />
       }
     ]
   }

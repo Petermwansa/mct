@@ -582,7 +582,7 @@ text: "codecanyon",
 ];
 
 **/__ Review List __/**
-const reviwtitle = "Add a Review";
+const reviewtitle = "Add a Review";
 
 let ReviewList = [
     {
