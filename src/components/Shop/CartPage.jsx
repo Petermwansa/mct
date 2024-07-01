@@ -59,7 +59,9 @@ const CartPage = () => {
         return total + calculateTotalPrice(item);
     }, 0)
 
-    const orderTotal = cartTotal;
+    const shippingFee = 50;
+
+    const orderTotal = cartTotal + shippingFee;
 
 
 
@@ -113,6 +115,71 @@ const CartPage = () => {
                             }
                         </tbody>
                     </table>
+                </div>
+
+                {/* for the bottom of the cart  */}
+                <div className='cart-bottom'>
+                    {/* the checkout box  */}
+                    <div className='cart-checkout-box'>
+                        <form className='coupon'>
+                            <input className='cart-page-input-text' type='text' name='coupon' placeholder='Coupon code...' />
+                            <input type='submit' value={"Apply Coupon"} />
+                        </form>
+
+                        <form>
+                            <input type='submit' value='Update Cart' />
+                        </form>
+                    </div>
+
+                    {/* shipping box  */}
+                    <div className='shiping-box'>
+                        <div className='row'>
+                            <div className='col-md-6 col-12'>
+                                <div className='calculate-shiping'>
+                                    <h3>Shipping Details</h3>
+                                    <div className='outline-select'>
+                                        <select>
+                                            <option value='russia'>Russia</option>
+                                            <option value='zambia'>Zambia</option>
+                                            <option value='uk'>United Kingdom</option>
+                                            <option value='zimbabwe'>Zimbabwe</option>
+                                        </select>
+                                        <span className='select-icon'><i className='icofont-rounded-down'></i></span>
+                                    </div>
+
+                                    <div className='outline-select shipping-select'>
+                                        <select>
+                                            <option value='lsk'>Lusaka</option>
+                                            <option value='msk'>Moscow</option>
+                                            <option value='spb'>Saint Petersburg</option>
+                                        </select>
+                                        <span className='select-icon'><i className='icofont-rounded-down'></i></span>
+                                    </div>
+                                    <input type='text' name='postalcode' id='postalcode' placeholder='Postalcode' className='cart-page-input-text' />
+                                    <button type='submit'>Confirm Address</button>
+                                </div>
+                            </div>
+                            <div className='col-md-6 col-12'>
+                                <div className='cart-overview'>
+                                    <h3>Cart Total</h3>
+                                    <ul className='lab-ul'>
+                                        <li>
+                                            <span>Cart Total</span>
+                                            <p className='pull-right'>${cartTotal.toFixed(2)}</p>
+                                        </li>
+                                        <li>
+                                            <span>Shipping</span>
+                                            <p className='pull-right'>{shippingFee.toFixed(2)}</p>
+                                        </li>
+                                        <li>
+                                            <span>Order Total</span>
+                                            <p className='pull-right'>${orderTotal.toFixed(2)}</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
