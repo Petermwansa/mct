@@ -345,9 +345,6 @@ const SingleProduct = () => {
                         </div>
                     </article>
                 </div>
-                <div className='col-lg-4 col-12'>
-
-                </div>
             </div>
         </div>
       </div>

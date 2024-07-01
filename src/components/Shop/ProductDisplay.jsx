@@ -109,7 +109,7 @@ const ProductDisplay = ({ item }) => {
                 </button>
 
                 <Link to='/cart-page' className='lab-btn bg-primary'>
-                    <span>Place order</span>
+                    <span>Peroceed To Cart</span>
                 </Link>
             </form>
         </div>
