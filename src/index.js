@@ -19,6 +19,8 @@ import Home from './components/Home/Home';
 import Shop from './components/Shop/Shop';
 import SingleProduct from './components/Shop/SingleProduct';
 import CartPage from './components/Shop/CartPage';
+import About from './components/About/About';
+import Contact from './components/Contact/Contact';
 
 
 const router = createBrowserRouter([
@@ -42,6 +44,14 @@ const router = createBrowserRouter([
         path: '/cart-page',
         element: <CartPage />
       },
+      {
+        path: '/about',
+        element: <About />
+      },
+      {
+        path: '/contact',
+        element: <Contact />
+      }
     ]
   }
 ])
