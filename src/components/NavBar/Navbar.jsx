@@ -1,12 +1,16 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo/logo.jpg';
+import { AuthContext } from '../../context/AuthProvider';
 
 
 const Navbar = () => {
     const [menuToggle, setMenuToggle] = useState(false);
     const [socialToggle, setSocialToggle] = useState(false);
     const [headerFixed, setHeaderFixed] = useState(false);
+
+
+    const { user } = useContext(AuthContext)
 
 
     //here we add the event listener
