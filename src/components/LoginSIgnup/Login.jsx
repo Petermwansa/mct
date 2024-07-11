@@ -30,9 +30,9 @@ const Login = () => {
 
   const from = location.state?.from?.pathname || '/';
 
-  const handleLogin = (e) => {
-    e.preventDefault();
-    const form = e.target;
+  const handleLogin = (event) => {
+    event.preventDefault();
+    const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
 
@@ -96,7 +96,7 @@ const Login = () => {
             {/* the account bottom  */}
             <div className='account-bottom'>
               <span className='d-block cate pt-10'>
-                Don't have an account? <Link to='sign-up'>Sign Up</Link>
+                Don't have an account? <Link to='/signup'>Sign Up</Link>
               </span>
               <span className='or'>
                 <span>or</span>
