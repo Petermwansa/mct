@@ -44,7 +44,6 @@ const Login = () => {
       const errMsg = error.message;
       setErrMessage("Please provide a valid email and password")
     })
-
   }
 
   const handleRegister = () => {
