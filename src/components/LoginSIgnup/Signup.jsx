@@ -31,12 +31,13 @@ const Signup = () => {
     })
   }
 
+
   const handleSignup = (event) => {
     event.preventDefault();
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
-    const confirmPassword = form.confirmPassword.value
+    const confirmPassword = form.confirmPassword.value;
     // console.log(email, password, confirmPassword);
 
     if (password !== confirmPassword) {
@@ -49,7 +50,7 @@ const Signup = () => {
         navigate(from, {replace: true});
       }).catch((error => {
         console.log(error.message);
-        alert(`${error.message}`)
+        alert(`${error.message}`);
       }))
     }
   }
