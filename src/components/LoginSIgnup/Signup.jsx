@@ -22,14 +22,13 @@ const Signup = () => {
   const from = location.state?.from?.pathname || '/';
 
   const handleRegister = () => {
-    signUpWithGmail().then(result => {
-      const user = result.user;
-      navigate(from, {replace: true})
-    }).catch(error => {
-      const errorMessage = error.message;
-      setErrMessage("The signup was not successful. Please provide valid details")
-    })
-  }
+    signUpWithGmail()
+      .then((result) => {
+        const user = result.user;
+        navigate(from, { replace: true });
+      })
+      .catch((error) => console.log(error));
+  };
 
 
   const handleSignup = (event) => {
@@ -101,7 +100,7 @@ const Signup = () => {
             <h5 className='subtitle'>{socialTitle}</h5>
             <ul className='lab-ul social-icons justify-content-center'>
               <li>
-                <a href='/' className='github' onClick={handleSignup}><i className='icofont-github'></i></a>
+                <button className='github' onClick={handleRegister}><i className='icofont-github'></i></button>
               </li>
               <li>
                 <a href='/' className='facebook'><i className='icofont-facebook'></i></a>
