@@ -4,7 +4,7 @@ import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStat
 
 export const AuthContext = createContext();
 const auth = getAuth();
-const googleProvider = new GoogleAuthProvider
+const provider = new GoogleAuthProvider();
 
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null)
@@ -19,10 +19,10 @@ const AuthProvider = ({ children }) => {
     }
 
 
-    //signing up with gmail 
+    //signing up with google popup 
     const signUpWithGmail = () => {
         setLoading(true);
-        return signInWithPopup( auth, googleProvider);
+        return signInWithPopup( auth, provider);
     }
 
     // login 
@@ -33,7 +33,6 @@ const AuthProvider = ({ children }) => {
 
     //logout
     const logout = () =>{
-        localStorage.removeItem('genius-token');
         return signOut(auth);
     }
 

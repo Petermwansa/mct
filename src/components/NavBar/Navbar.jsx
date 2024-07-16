@@ -10,8 +10,16 @@ const Navbar = () => {
     const [headerFixed, setHeaderFixed] = useState(false);
 
 
-    const { user } = useContext(AuthContext)
+    const { user, logout } = useContext(AuthContext)
 
+
+    const handleLogout = () => {
+        logout().then(() => {
+            console.log('logged out the user');
+        }).catch((error) => {
+            // An error happened.
+        });
+    }
 
     //here we add the event listener
     window.addEventListener("scroll", () => {
@@ -59,7 +67,8 @@ const Navbar = () => {
                     {/* sign in and login  */}
 
                     <Link to='/sign-up' className='lab-btn me-3 d-none d-md-block'>Create Account</Link>
-                    <Link to='/login' className='d-none d-md-block'>Login</Link>
+                    <Link to='/login' className='lab-btn me-3 d-none d-md-block'>Login</Link>
+                    <button onClick={handleLogout} className='lab-btn me-3 d-none d-md-block'>Logout</button>
 
                     {/* the menu toggler */}
                     <div onClick={() => setMenuToggle(!menuToggle)} className={`header-bar d-lg-none ${menuToggle ? 'active' : ''}` }>
