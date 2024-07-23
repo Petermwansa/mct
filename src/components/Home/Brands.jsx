@@ -13,7 +13,7 @@ import { Autoplay } from 'swiper/modules';
 
 
 import image1 from '../../assets/images/sponsor/01.png';
-import image2 from '../../assets/images/sponsor/02.png';
+import image2 from '../../assets/images/sponsor/apple.png';
 import image3 from '../../assets/images/sponsor/03.png';
 import image4 from '../../assets/images/sponsor/04.png';
 

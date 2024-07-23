@@ -1,49 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import image1 from '../../assets/images/clients/avater.jpg';
 
 
-const title = 'Hundreds of Customers';
+const title = 'Our clientbase extends to different parts of the world';
 
-const desc = "Buy products from us from anywhere in the world";
+const desc = "You can buy products from us from anywhere in the world";
 
-const clientsList = [
-{
-    imgUrl: image1,
-    imgAlt: 'education thumb rajibraj91 rajibraj',
-    text: 'Join with Us',
-},
-{
-    imgUrl: image1,
-    imgAlt: 'education thumb rajibraj91 rajibraj',
-    text: 'Join with Us',
-},
-{
-    imgUrl: image1,
-    imgAlt: 'education thumb rajibraj91 rajibraj',
-    text: 'Join with Us',
-},
-{
-    imgUrl: image1,
-    imgAlt: 'education thumb rajibraj91 rajibraj',
-    text: 'Join with Us',
-},
-{
-    imgUrl: image1,
-    imgAlt: 'education thumb rajibraj91 rajibraj',
-    text: 'Join with Us',
-},
-{
-    imgUrl: image1,
-    imgAlt: 'education thumb rajibraj91 rajibraj',
-    text: 'Join with Us',
-},
-{
-    imgUrl: image1,
-    imgAlt: 'education thumb rajibraj91 rajibraj',
-    text: 'Join with Us',
-},
-]
 
 const Locations = () => {
   return (
@@ -56,21 +17,6 @@ const Locations = () => {
 
         {/* the main content  */}
         <div className='section-wrapper'>
-            <div className='clients'>
-                {
-                    clientsList.map((val, i) => (
-                        <div key={i} className='client-list'>
-                            <Link to='/signup' className='client-content'>
-                                <span>{val.text}</span>
-                            </Link>
-                            {/* the images are for the clints thumbnails according to location but have been commented out  */}
-                            {/* <div className='client-thumb'>
-                                <img src={val.imgUrl} alt='the location' />
-                            </div> */}
-                        </div>
-                    ))
-                }
-            </div>
         </div>
       </div>
     </div>

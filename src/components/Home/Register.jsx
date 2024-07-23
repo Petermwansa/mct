@@ -1,10 +1,10 @@
 import React from 'react';
 
-const subTitle = "Save The Day"
+const subTitle = "Never Miss Out"
 const title = (
     <h2 className='title'>Join Our Newsletter to be update or all our <span>sales</span> and latest products</h2>
 )
-const desc = 'Time is Limited. Hurry Up!';
+const desc = 'Inspired by you. For You!';
 
 
 const Register = () => {
@@ -21,11 +21,10 @@ const Register = () => {
             </div>
             <div className='col'>
                 <div className='section-wrapper'>
-                    <h4>Register Now</h4>
+                    <h4>Newsletter</h4>
                     <form className='register-form'>
                         <input type='text' name='name' placeholder='Username' className='reg-input' />
                         <input type='email' name='email' placeholder='Email' className='reg-input' />
-                        <input type='number' name='number' placeholder='Phone' className='reg-input' />
                         <button type='submit' className='lab-btn'>
                             Register Now
                         </button>

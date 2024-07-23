@@ -15,7 +15,6 @@ const Home = () => {
         <CategoryShowCate />
         <Register />
         <Locations />
-        <Brands />
     </div>,
     document.getElementById('home')
   )

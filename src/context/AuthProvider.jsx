@@ -39,6 +39,7 @@ const AuthProvider = ({ children }) => {
     // user available or not 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
+            // console.log(currentUser);
             setUser(currentUser);
             setLoading(false)
         });
@@ -50,8 +51,30 @@ const AuthProvider = ({ children }) => {
 
 
 
+    var theUser = auth.currentUser;
+    var name, email, photoUrl, uid, emailVerified;
+    if (theUser !== null) {
+        name = theUser.displayName;
+        email = theUser.email;
+        photoUrl = theUser.photoURL;
+        emailVerified = theUser.emailVerified;
+        uid = theUser.uid;
+    }
+    // console.log(name);
+    // console.log(email);
+    // console.log(photoUrl);
+    // console.log(uid);
+
+    // if (theUser !== null) {
+    //     console.log("Not null");
+    // }
+    
+
+
+
     // this function is sending the info through the api 
     const authInfo = {
+        theUser,
         user,
         loading,
         createUser,

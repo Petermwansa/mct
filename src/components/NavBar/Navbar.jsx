@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo/logo.jpg';
 import { AuthContext } from '../../context/AuthProvider';
@@ -8,14 +8,28 @@ const Navbar = () => {
     const [menuToggle, setMenuToggle] = useState(false);
     const [socialToggle, setSocialToggle] = useState(false);
     const [headerFixed, setHeaderFixed] = useState(false);
+    const [logged, setLogged] = useState(false);
 
 
-    const { user, logout } = useContext(AuthContext)
+    const { theUser, user, logout } = useContext(AuthContext)
+
+
+    useEffect(() => {
+        if (theUser !== null) {
+            setLogged(true);
+        } else if(theUser === null) {
+            setLogged(false);
+        }
+    }, [theUser])
+
+
+    console.log(logged);
 
 
     const handleLogout = () => {
         logout().then(() => {
             console.log('logged out the user');
+            alert("Logout Successful")
         }).catch((error) => {
             // An error happened.
         });
@@ -66,9 +80,17 @@ const Navbar = () => {
 
                     {/* sign in and login  */}
 
-                    <Link to='/sign-up' className='lab-btn me-3 d-none d-md-block'>Create Account</Link>
-                    <Link to='/login' className='lab-btn me-3 d-none d-md-block'>Login</Link>
-                    <button onClick={handleLogout} className='lab-btn me-3 d-none d-md-block'>Logout</button>
+
+                    {
+                        !logged && (
+                            <Link to='/login' className='lab-btn me-3 d-none d-md-block'>Login</Link>
+                        )
+                    }
+                    {
+                        logged && (
+                            <button onClick={handleLogout} className='lab-btn me-3 d-none d-md-block'>Logout</button>
+                        )
+                    }
 
                     {/* the menu toggler */}
                     <div onClick={() => setMenuToggle(!menuToggle)} className={`header-bar d-lg-none ${menuToggle ? 'active' : ''}` }>
@@ -93,4 +115,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Navbar;

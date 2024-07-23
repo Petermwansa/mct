@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import "./Footer.css"
 
 
-const title = "About ShopCart";
-const desc = "Providing you with one of the best services out there on the market";
+const title = "About MTC";
+const desc = "MC TELECOMS: Inspired by you, for you!";
 const ItemTitle = "Categories";
 const quickTitle = "Quick Links";
 
@@ -29,24 +30,9 @@ const socialList = [
         className: 'facebook',
     },
     {
-        iconName: 'icofont-twitter',
-        siteLink: '#',
-        className: 'twitter',
-    },
-    {
-        iconName: 'icofont-linkedin',
-        siteLink: '#',
-        className: 'linkedin',
-    },
-    {
         iconName: 'icofont-instagram',
         siteLink: '#',
         className: 'instagram',
-    },
-    {
-        iconName: 'icofont-pinterest',
-        siteLink: '#',
-        className: 'pinterest',
     },
 ]
 
@@ -62,29 +48,21 @@ const ItemList = [
     {
         text: 'About',
         link: '/about',
-    },
-    {
-        text: 'Policy',
-        link: '#',
-    },
-    {
-        text: 'FAQs',
-        link: '/about',
     }
 ]
 
 const quickList = [
     {
-        text: 'Forums',
-        link: '#',
+        text: 'Home',
+        link: '/',
     },
     {
-        text: 'Privacy Policy',
-        link: '#',
+        text: 'Contact Us',
+        link: '/contact',
     },
     {
         text: 'Terms of Use',
-        link: '#',
+        link: '/terms',
     },
 ]
 
@@ -92,26 +70,18 @@ const year = new Date().getFullYear();
 
 const footerbottomList = [
     {
-        text: 'Faculty',
-        link: '#',
+        text: 'About Us',
+        link: '/about',
     },
     {
-        text: 'Staff',
-        link: '#',
-    },
-    {
-        text: 'Students',
-        link: '#',
-    },
-    {
-        text: 'Alumni',
-        link: '#',
+        text: 'Terms and Conditions',
+        link: '/terms',
     },
 ]
 
 const Footer = () => {
   return (
-    <footer className='style-2'>
+    <footer className='style-2 footer'>
       <div className='footer-top dark-view padding-tb'>
         <div className='container'>
             <div className='row g-4 row-cols-xl-3 row-cols-sm-2 row-cols-1 justify-content-center'>
@@ -159,7 +129,7 @@ const Footer = () => {
                                         {
                                             quickList.map((val, i) => (
                                                 <li key={i}>
-                                                    <a href='#'>{val.text}</a>
+                                                    <a href={val.link}>{val.text}</a>
                                                 </li>
                                             ))
                                         }
@@ -181,7 +151,7 @@ const Footer = () => {
                                         {
                                             ItemList.map((val, i) => (
                                                 <li key={i}>
-                                                    <a href='#'>{val.text}</a>
+                                                    <a href={val.link}>{val.text}</a>
                                                 </li>
                                             ))
                                         }
@@ -197,11 +167,11 @@ const Footer = () => {
       <div className='footer-bottom'>
         <div className='container'>
            <div className='section-wrapper'>
-             <p>{year}<Link to='/shop'>MCT</Link>Designed by <a href='/' target='_blank'>Rockie Tech</a></p>
+             <p>{year}<Link to='/shop'>MCT</Link>Powered by <a href='https://petermwansa.tech/' target='_blank'>Rockie Tech</a></p>
              <div className='footer-bottom-list'>
                 {
                     footerbottomList.map((val, i) => (
-                        <a href='#' key={i}>{val.text}</a>
+                        <a href={val.link} key={i}>{val.text}</a>
                     ))
                 }
              </div>

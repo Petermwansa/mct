@@ -25,6 +25,7 @@ import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './privateRoute/PrivateRoute';
 import Login from './components/LoginSIgnup/Login';
 import Signup from './components/LoginSIgnup/Signup';
+import Terms from './components/Terms/Terms';
 
 
 const router = createBrowserRouter([
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
       {
         path: '/contact',
         element: <Contact />
+      },
+      {
+        path: '/terms',
+        element: <Terms />
       }
     ]
   },

@@ -1,0 +1,39 @@
+.terms .terms__title {
+    margin: 5%;
+    font-size: 2.5rem;
+}
+
+.terms ol {
+    margin: 5%;
+}
+
+.terms ol li {
+    margin: 5% 0;
+}
+
+
+
+@media screen and (max-width: 992px) {
+    .terms .terms__title {
+        font-size: 2.3rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .terms .terms__title {
+        font-size: 2.1rem;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .terms .terms__title {
+        font-size: 1.8rem;
+    }
+}
+
+
+@media screen and (max-width: 576px) {
+    .terms .terms__title {
+        font-size: 1.5rem;
+    }
+}
