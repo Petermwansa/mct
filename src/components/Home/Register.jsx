@@ -1,4 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { doc, getFirestore, setDoc, serverTimestamp, getDoc} from 'firebase/firestore';
+import firebase from 'firebase/compat/app';
+import { FieldValue } from 'firebase/firestore';
+
+
 
 const subTitle = "Never Miss Out"
 const title = (
@@ -8,6 +13,41 @@ const desc = 'Inspired by you. For You!';
 
 
 const Register = () => {
+
+  const [input, setInput] = useState("");
+
+
+  const db = getFirestore();
+
+
+
+  const handleInput = (e) => {
+    setInput(e.target.value);
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (input) {
+      console.log(input);
+
+      // db.collection("emails").add({
+      //   email: input,
+      //   time: firebase.firestore.FieldValue.serverTimestamp()
+      // })
+
+      const userData = {
+        email: input,
+        time: serverTimestamp()
+
+      }
+
+      //  I will need to find ways of getting the uid 
+      const docRef = doc(db, "emails", "Set-uid-later");
+      setDoc(docRef, userData);
+
+    }
+  }
+
   return (
     <section className='register-section padding-tb pb-0'>
       <div className='container'>
@@ -22,10 +62,10 @@ const Register = () => {
             <div className='col'>
                 <div className='section-wrapper'>
                     <h4>Newsletter</h4>
-                    <form className='register-form'>
-                        <input type='text' name='name' id='name' placeholder='Username' className='reg-input' />
-                        <input type='email' name='email' id='email' placeholder='Email' className='reg-input' />
-                        <button type='submit' className='lab-btn'>
+                    <form className='register-form' >
+                        {/* <input type='text' name='name' id='fname' placeholder='Full Name' className='reg-input' /> */}
+                        <input type='email' name='email' id='email' placeholder='Email' className='reg-input' onChange={handleInput} value={input}/>
+                        <button type='submit' className='lab-btn' onClick={handleSubmit}>
                             Subscribe Now
                         </button>
                     </form>

@@ -6,8 +6,6 @@ import { doc, getFirestore, setDoc } from 'firebase/firestore';
 
 
 
-
-
 const title = "Signup";
 const socialTitle = "Signup With Social Media";
 const buttonText = "Signup Now";
@@ -49,6 +47,7 @@ const Signup = () => {
   const handleSignup = (event) => {
     event.preventDefault();
     const form = event.target;
+    const fName = form.target.value;
     const email = form.email.value;
     const password = form.password.value;
     const confirmPassword = form.confirmPassword.value;
@@ -57,16 +56,18 @@ const Signup = () => {
     // console.log(email, password, confirmPassword);
 
     if (password !== confirmPassword) {
-      setErrMessage("Passwords do not match!");
+      setErrMessage("The entered Passwords do not match! Please try again");
     } else {
       setErrMessage("");
-      createUser(email, password).then((userCredential) => {
+      createUser( email, password ).then((userCredential) => {
         const user = userCredential.user;
 
         const userData = {
           email: email,
           password: password
         }
+
+        
 
         // alert("Account created successfully");
         // navigate(from, {replace: true});
@@ -82,7 +83,7 @@ const Signup = () => {
           console.error("There was an error", error);
         })
 
-        
+
 
       }).catch((error => {
         console.log(error.message);
@@ -99,7 +100,7 @@ const Signup = () => {
           <h3 className='title'>{title}</h3>
           <form className='account-form' onSubmit={handleSignup}>
               <div className='form-group'>
-                <input type='name' name='name' id='name' placeholder='Full Name' required />
+                <input type='text' name='name' id='name' placeholder='Full Name' required />
               </div>
               <div className='form-group'>
                 <input type='email' name='email' id='email' placeholder='Email Address' required />

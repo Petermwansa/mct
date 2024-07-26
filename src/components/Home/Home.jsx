@@ -13,7 +13,7 @@ const Home = () => {
         <Banner />
         <HomeCategory />
         <CategoryShowCate />
-        <Register />
+        {/* <Register /> */}
         <Locations />
     </div>,
     document.getElementById('home')
