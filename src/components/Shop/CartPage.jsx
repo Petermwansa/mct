@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import PageHeader from '../PageHeader/PageHeader';
 import { Link } from 'react-router-dom';
 import delImg from '../../assets/images/shop/del.png';
+import './Cart.css';
 
 const CartPage = () => {
     const [cartItems, setCartItems] = useState([]);
@@ -66,7 +67,7 @@ const CartPage = () => {
 
 
   return (
-    <div>
+    <div className='cart-page'>
       <PageHeader title={'Shop Cart'} curPage={'Cart Page'} />
 
       <div className='shop-cart padding-tb'>

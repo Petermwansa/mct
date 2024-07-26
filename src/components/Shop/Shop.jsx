@@ -4,6 +4,7 @@ import ProductCard from './ProductCard';
 import Pagination from './Pagination';
 import Search from './Search';
 import ShopCategory from './ShopCategory';
+import './Shop.css';
 import image1 from '../../assets/images/category/laptops.jpeg';
 import image2 from '../../assets/images/laptops/dell.jpeg';
 import image3 from '../../assets/images/laptops/hp.jpeg';
@@ -270,7 +271,7 @@ const Shop = () => {
 
 
   return (
-    <div>
+    <div className='shop-page'>
         <PageHeader title="Our Shop Page" curPage='Shop'/>
         {/* the shop page */}
         <div className='shop-page'>

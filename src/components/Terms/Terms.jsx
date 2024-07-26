@@ -4,7 +4,7 @@ import './Terms.css'
 
 const Terms = () => {
   return (
-    <div>
+    <div className='terms-page'>
         <PageHeader title='Terms and Conditions' curPage={"Ts & Cs"}/>
         <div className='terms'>
             <h1 className='terms__title'>MC Telecoms Terms and Conditions</h1>

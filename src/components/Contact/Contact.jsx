@@ -1,5 +1,6 @@
 import React from 'react'
 import PageHeader from '../PageHeader/PageHeader';
+import './Contact.css';
 
 import image1 from '../../assets/images/icon/01.png'
 import image2 from '../../assets/images/icon/02.png'
@@ -46,7 +47,7 @@ const contactList = [
 
 const Contact = () => {
   return (
-    <div>
+    <div className='contact-page'>
       <PageHeader title='Get In Touch' curPage={"Contact Us"}/>
       <div className='map-address-section padding-tb section-bg'>
         <div className='container'>

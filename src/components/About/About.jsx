@@ -1,6 +1,7 @@
 import React from 'react';
 import PageHeader from '../PageHeader/PageHeader';
 import logo from '../../assets/images/logo/logo.jpg';
+import './About.css'
 
 
 const subTitle = "About MCT";
@@ -31,7 +32,7 @@ const aboutList = [
 
 const About = () => {
   return (
-    <div>
+    <div className='about-page'>
       <PageHeader title="MTC" curPage={'About'}/>
       <div className='about-section style-3 padding-tb section-bg'>
         <div className='row justify-content-center row-cols-xl-2 align-items-center'>
