@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import "./Footer.css"
 
 
+
 const title = "About MTC";
 const desc = "MC TELECOMS: Inspired by you, for you!";
 const ItemTitle = "Categories";
@@ -107,7 +108,7 @@ const Footer = () => {
                                         {
                                             socialList.map((val, i) => (
                                                 <li key={i}>
-                                                    <a className={val.className}><i className={val.iconName}>{val.text}</i></a>
+                                                    <a href={val.link} className={val.className}><i className={val.iconName}>{val.text}</i></a>
                                                 </li>
                                             ))
                                         }
@@ -167,7 +168,7 @@ const Footer = () => {
       <div className='footer-bottom'>
         <div className='container'>
            <div className='section-wrapper'>
-             <p>{year}<Link to='/shop'>MCT</Link>Powered by <a href='https://petermwansa.tech/' target='_blank'>Rockie Tech</a></p>
+             <p>{year}<Link to='/shop'>MCT</Link>Powered by <a href='https://petermwansa.tech/' target='_blank' rel="noreferrer">Rockie Tech</a></p>
              <div className='footer-bottom-list'>
                 {
                     footerbottomList.map((val, i) => (

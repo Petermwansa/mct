@@ -295,7 +295,7 @@ const SingleProduct = () => {
                                         <Swiper 
                                             spaceBetween={30}
                                             slidesPerView={1}
-                                            loop={'ture'}
+                                            loop={'true'}
                                             autoplay={{
                                                 delay: 2000,
                                                 disableOnInteraction: false

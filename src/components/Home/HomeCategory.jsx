@@ -6,7 +6,7 @@ import image3 from '../../assets/images/category/tablets.jpeg';
 import image4 from '../../assets/images/category/watches.jpeg';
 import image5 from '../../assets/images/category/airpods.jpeg';
 import image6 from '../../assets/images/category/headsets.jpeg';
-import image7 from '../../assets/images/category/magsafe.jpeg';
+import image7 from '../../assets/images/pencils/2024-05-27 13.31.55.jpg';
 
 
 const subTitle = "Choose Any Products";
@@ -19,49 +19,49 @@ const categoryList = [
     imgUrl: image1,
     imgAlt: 'category rajibraj91 rajibraj',
     iconName: 'icofont-brand-windows',
-    title: 'Phones',
+    title: 'phones',
 },
 {
     id: 'adfefbdfbvdsfjbjbbv',
     imgUrl: image2,
     imgAlt: 'category rajibraj91 rajibraj',
     iconName: 'icofont-brand-windows',
-    title: 'Laptops',
+    title: 'laptops',
 },
 {
     id: 'adfefbdbgjbjbjbdfdsghcvdjhbvdsfbv',
     imgUrl: image3,
     imgAlt: 'category rajibraj91 rajibraj',
     iconName: 'icofont-brand-windows',
-    title: 'Tablets',
+    title: 'tablets',
 },
 {
     id: 'adfefbdbgjbjbj23454kbdfbvdsfbv',
     imgUrl: image4,
     imgAlt: 'category rajibraj91 rajibraj',
     iconName: 'icofont-brand-windows',
-    title: 'Watches',
+    title: 'watches',
 },
 {
     id: 'adfefbdbgbdfjbbjbbvdscdkjcnb34sfbv',
     imgUrl: image5,
     imgAlt: 'category rajibraj91 rajibraj',
     iconName: 'icofont-brand-windows',
-    title: 'AirPods',
+    title: 'airPods',
 },
 {
     id: 'adfefbdbgbdfjjjjjbvd35vfvsfbv',
     imgUrl: image6,
     imgAlt: 'category rajibraj91 rajibraj',
     iconName: 'icofont-brand-windows',
-    title: 'HeadSets',
+    title: 'headSets',
 },
 {
     id: 'adfefbdhhbgbdfbbbbuuuvdscdkjcnb34sfbv',
     imgUrl: image7,
     imgAlt: 'category rajibraj91 rajibraj',
     iconName: 'icofont-brand-windows',
-    title: 'Pencils',
+    title: 'pencils',
 }
 ]
 

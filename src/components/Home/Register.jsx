@@ -23,10 +23,10 @@ const Register = () => {
                 <div className='section-wrapper'>
                     <h4>Newsletter</h4>
                     <form className='register-form'>
-                        <input type='text' name='name' placeholder='Username' className='reg-input' />
-                        <input type='email' name='email' placeholder='Email' className='reg-input' />
+                        <input type='text' name='name' id='name' placeholder='Username' className='reg-input' />
+                        <input type='email' name='email' id='email' placeholder='Email' className='reg-input' />
                         <button type='submit' className='lab-btn'>
-                            Register Now
+                            Subscribe Now
                         </button>
                     </form>
                 </div>

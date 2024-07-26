@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider';
 import { GoogleAuthProvider } from 'firebase/auth';
+import { doc, getFirestore, setDoc } from 'firebase/firestore';
 
 
 
@@ -51,6 +52,8 @@ const Signup = () => {
     const email = form.email.value;
     const password = form.password.value;
     const confirmPassword = form.confirmPassword.value;
+    const db = getFirestore();
+
     // console.log(email, password, confirmPassword);
 
     if (password !== confirmPassword) {
@@ -59,8 +62,28 @@ const Signup = () => {
       setErrMessage("");
       createUser(email, password).then((userCredential) => {
         const user = userCredential.user;
-        alert("Account created successfully");
-        navigate(from, {replace: true});
+
+        const userData = {
+          email: email,
+          password: password
+        }
+
+        // alert("Account created successfully");
+        // navigate(from, {replace: true});
+
+        // for the firestore 
+        const docRef = doc(db, "users", user.uid);
+        setDoc(docRef, userData)
+        .then(() => {
+          alert("Account created and added to firestore successfully");
+          navigate(from, {replace: true});
+        })
+        .catch((error) => {
+          console.error("There was an error", error);
+        })
+
+        
+
       }).catch((error => {
         console.log(error.message);
         alert(`${error.message}`);
