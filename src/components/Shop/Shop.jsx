@@ -24,19 +24,7 @@ import image15 from '../../assets/images/pencils/2024-05-27 13.31.55.jpg';
 
 
 const Data = [
-  {
-    id: "124e13b9-2d54-4b2d-a77b362d6ead",
-    category: "laptops",
-    name: "MacBook Pro 2023",
-    seller: "Apple",
-    price: 920,
-    stock: 20,
-    ratings: 4,
-    ratingsCount: 3725,
-    img: image1,
-    shipping: 1,
-    quantity: 0
-  },
+
   {
     id: "4e13b9-2d54-4b2f-a74d-a77b362d6ead",
     category: "laptops",

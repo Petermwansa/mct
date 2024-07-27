@@ -88,7 +88,12 @@ const Navbar = () => {
                     }
                     {
                         logged && (
-                            <button onClick={handleLogout} className='lab-btn me-3 d-none d-md-block'>Logout</button>
+                            <>
+                                <button onClick={handleLogout} className='lab-btn me-3 d-none d-md-block'>Logout</button>
+                                <Link to='/cart-page' className='lab-btn me-3 d-none d-md-block'><i className='icofont-cart-alt'></i></Link>
+                            </>
+
+
                         )
                     }
 

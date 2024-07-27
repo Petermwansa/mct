@@ -5,7 +5,6 @@ import { GoogleAuthProvider } from 'firebase/auth';
 import { doc, getFirestore, setDoc } from 'firebase/firestore';
 
 
-
 const title = "Signup";
 const socialTitle = "Signup With Social Media";
 const buttonText = "Signup Now";
@@ -13,7 +12,7 @@ const buttonText = "Signup Now";
 
 
 const Signup = () => {
-  const [errMessage, setErrMessage] = useState('');
+  const [errMessage, setErrMessage] = useState('')
 
   const { signUpWithGmail, createUser } = useContext(AuthContext);
   const location = useLocation();

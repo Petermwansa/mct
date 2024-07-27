@@ -35,20 +35,6 @@ import Review from './Review';
 
 const Data = [
     {
-      id: "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
-      category: "laptops",
-      name: "MacBook Pro 2023",
-      seller: "Apple",
-      price: 920,
-      stock: 20,
-      ratings: 4,
-      ratingsCount: 3725,
-      img: image1,
-      shipping: 1,
-      quantity: 0,
-      description: "Meet the biggest and heaviest phone Apple has made so far - the iPhone 12 Pro Max. But while its size might be extra-large, the 12 Pro Max is in no way bulky. The new design and 7mm slim profile make this huge iPhone one exquisite-looking piece of technology that's a real pleasure to use and carry around."
-    },
-    {
       id: "4e13b9-2d54-4b2f-a74d-a77b362d6ead",
       category: "laptops",
       name: "MacBook Pro 2023",
@@ -340,9 +326,9 @@ const SingleProduct = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='review'>
+                        {/* <div className='review'>
                             <Review />
-                        </div>
+                        </div> */}
                     </article>
                 </div>
             </div>

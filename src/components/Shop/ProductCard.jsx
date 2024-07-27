@@ -3,6 +3,26 @@ import { Link } from 'react-router-dom'
 
 const ProductCard = ({gridList, products}) => {
 
+    // const handleAddToCart = (e) => {
+    //     e.preventDefault();
+
+    //     // console.log(product);
+
+  
+
+    //     const existingProductIndex = existingCart.findIndex((item) => item.id === id);
+
+
+    //     if (existingProductIndex !== - 1) {
+    //         existingCart[existingProductIndex].quantity += prequantity;
+    //     } else {
+    //         existingCart.push(products);
+    //     }
+
+    //     //update the local storage
+    //     localStorage.setItem("cart", JSON.stringify(existingCart));
+    // }
+
   return (
     <div className={`shop-product-wrap row justify-content-center ${gridList ? 'grid' : 'list'}`}>
         {
@@ -17,8 +37,8 @@ const ProductCard = ({gridList, products}) => {
                             {/* product action link  */}
                             <div className='product-action-link'>
                                 <Link to={`/shop/${val.id}`}><i className='icofont-eye'></i></Link>
-                                <a href='#'><i className='icofont-heart'></i></a>
-                                <Link to='/cart-page'><i className='icofont-cart-alt'></i></Link>
+                                {/* <a href='#'><i className='icofont-heart'></i></a> */}
+                                {/* <Link onClick={handleAddToCart}><i className='icofont-cart-alt'></i></Link> */}
                             </div>
                         </div>
 
@@ -43,7 +63,7 @@ const ProductCard = ({gridList, products}) => {
                             {/* product action link  */}
                             <div className='product-action-link'>
                                 <Link to={`/shop/${val.id}`}><i className='icofont-eye'></i></Link>
-                                <a href='#'><i className='icofont-heart'></i></a>
+                                {/* <a href='#'><i className='icofont-heart'></i></a> */}
                                 <Link to='cart-page'><i className='icofont-cart-alt'></i></Link>
                             </div>
                         </div>

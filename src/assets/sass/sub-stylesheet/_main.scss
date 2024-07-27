@@ -2593,7 +2593,7 @@
 					@extend %flex;
                     @include transform(translateX(-50%));
 					@include transition($transition);
-					a {
+					butaton {
 						width: 40px;
 					    height: 40px;
 					    line-height: 40px;
