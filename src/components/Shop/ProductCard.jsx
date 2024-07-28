@@ -64,7 +64,7 @@ const ProductCard = ({gridList, products}) => {
                             <div className='product-action-link'>
                                 <Link to={`/shop/${val.id}`}><i className='icofont-eye'></i></Link>
                                 {/* <a href='#'><i className='icofont-heart'></i></a> */}
-                                <Link to='cart-page'><i className='icofont-cart-alt'></i></Link>
+                                {/* <Link to='cart-page'><i className='icofont-cart-alt'></i></Link> */}
                             </div>
                         </div>
 

@@ -1,3 +1,16 @@
 .cart-page {
     margin-bottom: 34rem;
 }
+
+.form-input {
+    display: none;
+}
+
+.cart-total {
+    margin-top: 4rem;
+}
+
+.cart-plus-minus {
+    margin-left: -2rem;
+}
+

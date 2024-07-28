@@ -22,28 +22,28 @@ const contactList = [
     imgUrl: image1,
     imgAlt: "contact icon",
     title: "Office Address",
-    desc: "1201 park street, Fifth Avenue",
+    desc: "Lusaka",
     },
     {
     id: 2,  
     imgUrl: image2,
     imgAlt: "contact icon",
     title: "Phone number",
-    desc: "+22698 745 632,02 982 745",
+    desc: "+260 0000 00 00",
     },
     {
     id: 3,
     imgUrl: image3,
     imgAlt: "contact icon",
     title: "Send email",
-    desc: "admin@shopcart.com",
+    desc: "admin@mct.shop",
     },
     {
     id: 4,
     imgUrl: image4,
     imgAlt: "contact icon",
     title: "Our website",
-    desc: "www.shopcart.com",
+    desc: "www.mct.shop",
     },
 ];
 

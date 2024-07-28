@@ -3137,7 +3137,7 @@
             margin-bottom: 40px;
             box-shadow: 0 0 10px rgba(136, 136, 136, .10);
 			table {
-                font-weight: 700;
+                font-weight: 600;
                 @extend %w-100;
                 .cat-product {
                     .p-content {
@@ -3176,7 +3176,7 @@
 					  		    padding: 10px;
                             }
 					  		&:nth-child(3) {
-					  			@extend %text-center;
+					  			
 					  		}
 					  		&:last-child {
 					  			text-align: right;

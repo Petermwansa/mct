@@ -32,6 +32,7 @@ const ProductDisplay = ({ item }) => {
             id: id,
             name: name,
             price: price,
+            size: size,
             quantity: prequantity,
             color: color,
             img: img,
@@ -100,9 +101,9 @@ const ProductDisplay = ({ item }) => {
                     <div className='inc qtybutton' onClick={handleIncrease}>+</div>
                 </div>
 
-                <div  className='discount-code mb-2'>
+                {/* <div  className='discount-code mb-2'>
                     <input type='text' placeholder='Enter Discount Code' onChange={(e) => setCoupon(e.target.value)} />
-                </div>
+                </div> */}
 
                 <button type='submit' className='lab-btn'>
                     <span>Add to cart</span>

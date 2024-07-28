@@ -235,7 +235,7 @@ const ShopCategory = ({filterItem, setItem, menuItems, setProducts, selectedCate
     return (
     <>
       <div className='widget-header'>
-        <h5 className='ms-2'>All Categories</h5>
+        <h5 className='ms-2'>All Categoriess</h5>
       </div>
       <div className=''>
         <button 
