@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PageHeader from '../PageHeader/PageHeader';
 import './Contact.css';
 
@@ -45,7 +45,18 @@ const contactList = [
     },
 ];
 
+
+
 const Contact = () => {
+    const [input, setInput] = useState({
+        name: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: ""
+    })
+
+
   return (
     <div className='contact-page'>
       <PageHeader title='Get In Touch' curPage={"Contact Us"}/>
@@ -96,19 +107,19 @@ const Contact = () => {
             <div className='section-wrapper'>
                 <form className='contact-form'>
                     <div className='form-group'>
-                        <input type='text' name='name' id='name' placeholder='Your Name' required />
+                        <input type='text' onChange={(e) => setInput({ ...input, name: e.target.value})} value={input.name} name='name' id='name' placeholder='Your Name' required />
                     </div>
                     <div className='form-group'>
-                        <input type='email' name='email' id='email' placeholder='Your Email' required />
+                        <input type='email' onChange={(e) => setInput({ ...input, email: e.target.value})} value={input.email} name='email' id='email' placeholder='Your Email' required />
                     </div>
                     <div className='form-group'>
-                        <input type='number' name='phone' id='phone' placeholder='Phone Number' required />
+                        <input type='number' onChange={(e) => setInput({ ...input, phone: e.target.value})} value={input.phone} name='phone' id='phone' placeholder='Phone Number' required />
                     </div>
                     <div className='form-group'>
-                        <input type='text' name='subject' id='subject' placeholder='Subject' required />
+                        <input type='text' onChange={(e) => setInput({ ...input, subject: e.target.value})} value={input.subject} name='subject' id='subject' placeholder='Subject' required />
                     </div>
                     <div className='form-group w-100'>
-                        <textarea name='message' id='message' rows='8' placeholder='Enter your messahe here...'></textarea>
+                        <textarea name='message' onChange={(e) => setInput({ ...input, message: e.target.value})} value={input.message} id='message' rows='8' placeholder='Enter your messahe here...'></textarea>
                     </div>
                     <div className='form-group w-100 text-center'>
                         <button className='lab-btn'>
