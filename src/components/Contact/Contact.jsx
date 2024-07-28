@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import PageHeader from '../PageHeader/PageHeader';
 import './Contact.css';
+import emailjs from '@emailjs/browser';
+
 
 import image1 from '../../assets/images/icon/01.png'
 import image2 from '../../assets/images/icon/02.png'
@@ -12,7 +14,7 @@ const subTitle = "Get in touch with us";
 const title = "We're Always At Your Service";
 const conSubTitle = "Get in touch with Contact us";
 const conTitle = "Fill The Form Below So We Can Get To Know You And Your Needs Better.";
-const btnText = "Send our Message";
+const btnText = "Send Your Message";
 
 const contactList = [
     {
@@ -48,6 +50,10 @@ const contactList = [
 
 
 const Contact = () => {
+
+    const form = useRef();
+
+    // the hook to get hold of the entered data 
     const [input, setInput] = useState({
         name: "",
         email: "",
@@ -55,6 +61,35 @@ const Contact = () => {
         subject: "",
         message: ""
     })
+
+
+    // the function for submiting 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        console.log(input);
+    }
+
+
+
+
+    // for the form submition 
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_jumtarb', 'template_fh4ujll', form.current, {
+            publicKey: 'wsJLpkzBqdCpoWlny',
+        })
+        .then(
+            () => {
+            console.log('The message has been submitted successfully!');
+            },
+            (error) => {
+            console.log('Failed to send the message...', error.text);
+            },
+        );
+    }
 
 
   return (
@@ -105,24 +140,24 @@ const Contact = () => {
             </div>
 
             <div className='section-wrapper'>
-                <form className='contact-form'>
+                <form  ref={form} onSubmit={sendEmail} className='contact-form'>
                     <div className='form-group'>
-                        <input type='text' onChange={(e) => setInput({ ...input, name: e.target.value})} value={input.name} name='name' id='name' placeholder='Your Name' required />
+                        <input type='text' onChange={(e) => setInput({ ...input, name: e.target.value})} value={input.name} name='from_name' id='name' placeholder='Your Name' required />
                     </div>
                     <div className='form-group'>
-                        <input type='email' onChange={(e) => setInput({ ...input, email: e.target.value})} value={input.email} name='email' id='email' placeholder='Your Email' required />
+                        <input type='email' onChange={(e) => setInput({ ...input, email: e.target.value})} value={input.email} name='from_email' id='email' placeholder='Your Email' required />
                     </div>
                     <div className='form-group'>
-                        <input type='number' onChange={(e) => setInput({ ...input, phone: e.target.value})} value={input.phone} name='phone' id='phone' placeholder='Phone Number' required />
+                        <input type='number' onChange={(e) => setInput({ ...input, phone: e.target.value})} value={input.phone} name='from_phone' id='phone' placeholder='Phone Number' required />
                     </div>
                     <div className='form-group'>
-                        <input type='text' onChange={(e) => setInput({ ...input, subject: e.target.value})} value={input.subject} name='subject' id='subject' placeholder='Subject' required />
+                        <input type='text' onChange={(e) => setInput({ ...input, subject: e.target.value})} value={input.subject} name='from_subject' id='subject' placeholder='Subject' required />
                     </div>
                     <div className='form-group w-100'>
                         <textarea name='message' onChange={(e) => setInput({ ...input, message: e.target.value})} value={input.message} id='message' rows='8' placeholder='Enter your messahe here...'></textarea>
                     </div>
                     <div className='form-group w-100 text-center'>
-                        <button className='lab-btn'>
+                        <button  type='submit' value="Send" className='lab-btn'>
                             <span>{btnText}</span>
                         </button>
                     </div>
