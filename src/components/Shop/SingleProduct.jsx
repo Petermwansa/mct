@@ -306,7 +306,7 @@ const SingleProduct = () => {
 
   return (
     <div>
-      <PageHeader title={"Our Shop Single"} curPage={"Home / Shop / Single Product"} />
+      <PageHeader title={"My Shopping"} curPage={"Home / Shop / Single Product"} />
 
       <div className='shop-single padding-tb aside-bg'>
         <div className='container'>
