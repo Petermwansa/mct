@@ -16,7 +16,7 @@ const aboutList = [
     {
     id: 1,
     title: 'Quality Products',
-    desc: 'We offer and original products',
+    desc: 'We offer quality and original products',
     },
     {
     id: 2,
