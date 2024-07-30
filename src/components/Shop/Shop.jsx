@@ -5,12 +5,10 @@ import Pagination from './Pagination';
 import Search from './Search';
 import ShopCategory from './ShopCategory';
 import './Shop.css';
-import image1 from '../../assets/images/category/laptops.jpeg';
-import image2 from '../../assets/images/laptops/dell.jpeg';
-import image3 from '../../assets/images/laptops/hp.jpeg';
-import image4 from '../../assets/images/phones/iphone-15.jpeg';
-import image5 from '../../assets/images/phones/s23.jpeg';
-import image6 from '../../assets/images/phones/huawei-pura.jpeg';
+import image3 from '../../assets/images/laptops/macbook-air.jpg';
+import image4 from '../../assets/images/phones/iphone-14-pro-max.jpeg';
+import image5 from '../../assets/images/phones/Galaxy_S22_Ultra_PR_main1F.jpg';
+import image6 from '../../assets/images/phones/Pixel-5.jpg';
 import image7 from '../../assets/images/watches/2024-05-27 13.27.40.jpg';
 import image8 from '../../assets/images/watches/2024-05-27 13.30.01.jpg';
 import image9 from '../../assets/images/watches/2024-05-27 13.30.21.jpg';
@@ -20,30 +18,25 @@ import image12 from '../../assets/images/pencils/2024-05-27 13.31.29.jpg';
 import image13 from '../../assets/images/pencils/2024-05-27 13.31.39.jpg';
 import image14 from '../../assets/images/pencils/2024-05-27 13.31.47.jpg';
 import image15 from '../../assets/images/pencils/2024-05-27 13.31.55.jpg';
+import image16 from '../../assets/images/tablets/ipad-pro20-2022.jpeg';
+import image18 from '../../assets/images/laptops/download.jpeg';
+import image19 from '../../assets/images/earphones/airpodsPro.png';
+import image20 from '../../assets/images/earphones/airpodsmax.jpeg';
+import image21 from '../../assets/images/tablets/ipad-10-wifi.jpeg';
+import image22 from '../../assets/images/magsafe/2024-05-27 13.31.13.jpg';
+
+import { Helmet } from 'react-helmet';
 
 
 
 const Data = [
 
   {
-    id: "4e13b9-2d54-4b2f-a74d-a77b362d6ead",
-    category: "laptops",
-    name: "MacBook Pro 2023",
-    seller: "Apple",
-    price: 920,
-    stock: 20,
-    ratings: 4,
-    ratingsCount: 3725,
-    img: image2,
-    shipping: 1,
-    quantity: 0
-  },
-  {
     id: "124e13b9-4b2f-a74d-a77b362d6ead",
     category: "laptops",
-    name: "MacBook Pro 2023",
+    name: "MacBook Air 13",
     seller: "Apple",
-    price: 920,
+    price: 835,
     stock: 20,
     ratings: 4,
     ratingsCount: 3725,
@@ -54,9 +47,9 @@ const Data = [
   {
     id: "124e13b9-24-4b2f-a74d-a77b362d6ead",
     category: "Phones",
-    name: "iPhone 15 Pro Max",
+    name: "iPhone 14 Pro Max",
     seller: "Apple",
-    price: 920,
+    price: 1130,
     stock: 20,
     ratings: 4,
     ratingsCount: 3725,
@@ -69,7 +62,7 @@ const Data = [
     category: "Phones",
     name: "Samsung S23 Ultra",
     seller: "Samsung",
-    price: 820,
+    price: 746,
     stock: 20,
     ratings: 4,
     ratingsCount: 3725,
@@ -80,9 +73,9 @@ const Data = [
   {
     id: "124e13b9-2d54-4b77b362d6ead",
     category: "Phones",
-    name: "Huawei Pura 70 Ultra",
-    seller: "Huawei",
-    price: 800,
+    name: "Google Pixel 5",
+    seller: "Google",
+    price: 236,
     stock: 20,
     ratings: 4,
     ratingsCount: 3725,
@@ -93,9 +86,9 @@ const Data = [
   {
     id: "124e13b9-2d5a74d-a77b362d6ead",
     category: "Watches",
-    name: "Apple watch",
+    name: "Apple watch S9 GPS",
     seller: "Apple",
-    price: 400,
+    price: 410,
     stock: 20,
     ratings: 4,
     ratingsCount: 3725,
@@ -104,24 +97,11 @@ const Data = [
     quantity: 0
   },
   {
-    id: "124e13b9-2d5477b362d6ead",
-    category: "Watches",
-    name: "Apple watch",
-    seller: "Apple",
-    price: 400,
-    stock: 20,
-    ratings: 4,
-    ratingsCount: 3725,
-    img: image8,
-    shipping: 1,
-    quantity: 0
-  },
-  {
     id: "12-4b2f-a74d-a77b362d6ead",
     category: "Watches",
-    name: "Apple watch",
+    name: "Apple watch SE 2023",
     seller: "Apple",
-    price: 400,
+    price: 285,
     stock: 20,
     ratings: 4,
     ratingsCount: 3725,
@@ -132,9 +112,9 @@ const Data = [
   {
     id: "124e13b9-2d54-4b2f-a74d-a77b362d6",
     category: "Watches",
-    name: "Apple watch",
+    name: "Apple watch SE 2023",
     seller: "Apple",
-    price: 400,
+    price: 285,
     stock: 20,
     ratings: 4,
     ratingsCount: 3725,
@@ -145,9 +125,9 @@ const Data = [
   {
     id: "124e134b2f-a74d-a77b362d6ead",
     category: "Watches",
-    name: "Apple watch",
+    name: "Apple watch SE",
     seller: "Apple",
-    price: 400,
+    price: 285,
     stock: 20,
     ratings: 4,
     ratingsCount: 3725,
@@ -157,10 +137,10 @@ const Data = [
   },
   {
     id: "124e1b362d6ead",
-    category: "Pencils",
-    name: "Apple Pencil",
+    category: "Watch",
+    name: "Apple Watch",
     seller: "Apple",
-    price: 400,
+    price: 285,
     stock: 20,
     ratings: 4,
     ratingsCount: 3725,
@@ -171,9 +151,9 @@ const Data = [
   {
     id: "124e13b9-2d54-a77b362d6ead",
     category: "Pencils",
-    name: "Apple Pencil",
+    name: "Apple Pencil 2",
     seller: "Apple",
-    price: 400,
+    price: 120,
     stock: 20,
     ratings: 4,
     ratingsCount: 3725,
@@ -184,9 +164,9 @@ const Data = [
   {
     id: "124e13b9-2d54-47b362d6ead",
     category: "Pencils",
-    name: "Apple Pencil",
+    name: "Apple Pencil 2",
     seller: "Apple",
-    price: 400,
+    price: 120,
     stock: 20,
     ratings: 4,
     ratingsCount: 3725,
@@ -197,9 +177,9 @@ const Data = [
   {
     id: "124e13b9f-a74d-a77b362d6ead",
     category: "Pencils",
-    name: "Apple Pencil",
+    name: "Apple Pencil 2",
     seller: "Apple",
-    price: 400,
+    price: 120,
     stock: 20,
     ratings: 4,
     ratingsCount: 3725,
@@ -210,9 +190,9 @@ const Data = [
   {
     id: "124e13b9-2d-a77b362d6ead",
     category: "Pencils",
-    name: "Apple Pencil",
+    name: "Apple Pencil 2",
     seller: "Apple",
-    price: 400,
+    price: 120,
     stock: 20,
     ratings: 4,
     ratingsCount: 3725,
@@ -220,6 +200,85 @@ const Data = [
     shipping: 1,
     quantity: 0
   },
+  {
+    id: "124e13hhhb9-2d-a7jhvjhvjhvhjvhj7b3eadjbj",
+    category: "tablets",
+    name: "Apple iPad Air 5  M1Cellular",
+    seller: "Apple",
+    price: 629,
+    stock: 20,
+    ratings: 4,
+    ratingsCount: 3725,
+    img: image16,
+    shipping: 1,
+    quantity: 0
+  },
+  {
+    id: "124e13b9-2d-a7jhvjh7b3iuyvfydfgdgheadjbj",
+    category: "laptops",
+    name: "Apple MacBook Pro M3 Max",
+    seller: "Apple",
+    price: 3630,
+    stock: 20,
+    ratings: 4,
+    ratingsCount: 3725,
+    img: image18,
+    shipping: 1,
+    quantity: 0
+  },
+  {
+    id: "124e13b9-2d-a7jjvkhvvuhgchgtcxgh7b3eadjbj",
+    category: "Airpods",
+    name: "AirPods Pro",
+    seller: "Apple",
+    price: 275,
+    stock: 20,
+    ratings: 4,
+    ratingsCount: 3725,
+    img: image19,
+    shipping: 1,
+    quantity: 0
+  },
+  {
+    id: "124e13b9-2jvjvd-a77b3ehgcjhlihfvfjgvjkvadjbj",
+    category: "Airpods",
+    name: "Apple AirPods Max",
+    seller: "Apple",
+    price: 615,
+    stock: 20,
+    ratings: 4,
+    ratingsCount: 3725,
+    img: image20,
+    shipping: 1,
+    quantity: 0
+  },
+  {
+    id: "124e13b9-2hhhhhhjgcjgd-a7jhvjvjhvjh7b3eadjbj",
+    category: "Airpods",
+    name: "Apple IPad 10 WI-FI",
+    seller: "Apple",
+    price: 495,
+    stock: 20,
+    ratings: 4,
+    ratingsCount: 3725,
+    img: image21,
+    shipping: 1,
+    quantity: 0
+  },
+  {
+    id: "124e13b9-2hhhhhhd-a77b3eadjbj",
+    category: "MagSafe",
+    name: "Apple MagSafe",
+    seller: "Apple",
+    price: 60,
+    stock: 20,
+    ratings: 4,
+    ratingsCount: 3725,
+    img: image22,
+    shipping: 1,
+    quantity: 0
+  },
+
   ]
   
 
@@ -260,6 +319,11 @@ const Shop = () => {
 
   return (
     <div className='shop-page'>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>MTC - Shop</title>
+                <link rel="canonical" href="#" />
+            </Helmet>
         <PageHeader title="Our Shop Page" curPage='Shop'/>
         {/* the shop page */}
         <div className='shop-page'>

@@ -8,7 +8,7 @@ const desc = "You can buy products from us from anywhere in the world";
 
 const Locations = () => {
   return (
-    <div className='clients-section style-2 padding-tb'>
+    <div className='clients-section style-2 padding-tb' id='locations'>
       <div className='container'>
         <div className='section-header text-center'>
             <h2>{title}</h2>

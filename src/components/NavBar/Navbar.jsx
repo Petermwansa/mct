@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo/logo.jpg';
 import { AuthContext } from '../../context/AuthProvider';
+import './Navbar.css'
 
 
 const Navbar = () => {
@@ -46,70 +47,64 @@ const Navbar = () => {
 
   return (
     <div>
-      <header className={`header-section style-4 ${headerFixed ? 'header-fixed fadeInUp' : ''}`}>
-        {/* the header top  */}
-        <div className={`header-top d-md-none ${socialToggle ? 'open' : ''}`}>
-            <div className='container'>
-                <div className='header-top-area'>
-                    <Link to='/signup' className='lab-btn me-3'><span>Create Account</span></Link>
-                    <Link to='/login' className=''>Login</Link>
-                </div>
-            </div>
-        </div>
+      <header className={`header-section style-4 ${headerFixed ? 'header-fixed fadeInUp' : " "}`}>
+
         {/* the header top  */}
         <div className='header-bottom'>
             <div className='container'>
                 <div className='header-wrapper'>
-                {/* logo */}
-                <div className='logo-search-acte'>
-                    <div className='logo'>
-                        <Link to={'/'}>
-                            <img src={logo} alt='logo' className='img-responsive'/>
-                        </Link>
+                    <div className='logo-search-acte'>
+                        <div className='logo'>
+                            <Link to={'/'}>
+                                <img src={logo} alt='logo' className='logo'/>
+                            </Link>
+                        </div>
                     </div>
-                </div>
-                <div className='menu-area'>
-                    <div className='menu'>
-                        <ul className={`lab-ul ${menuToggle ? 'active' : ''}`}>
-                            <li><Link to='/'>Home</Link></li>
-                            <li><Link to='/shop'>Shop</Link></li>
-                            <li><Link to='/about'>About</Link></li>
-                            <li><Link to='/contact'>Contact</Link></li>
-                        </ul>
+                    <div className='menu-area'>
+                        <div className='menu'>
+                            <ul className={`lab-ul ${menuToggle ? 'active' : ''}`}>
+                                <li><Link to='/'>Home</Link></li>
+                                <li><Link to='/shop'>Shop</Link></li>
+                                <li><Link to='/about'>About</Link></li>
+                                <li><Link to='/contact'>Contact</Link></li>
+                                {
+                                    logged && (
+                                        <li>
+                                            <button onClick={handleLogout} className='lab-btn '>Logout</button>
+                                        </li>
+                                    )
+                                }
+                            </ul>
+                        </div>
+
+                        {/* sign in and login  */}
+
+
+                        {
+                            !logged && (
+                                <Link to='/login' className='lab-btn '>Login</Link>
+                            )
+                        }
+                        {
+                            logged && (
+                                <>
+                                    <Link to='/cart-page' className='lab-btn '><i className='icofont-cart-alt'></i></Link>
+                                </>
+
+
+                            )
+                        }
+
+                        {/* the menu toggler */}
+                        <div onClick={() => setMenuToggle(!menuToggle)} className={`header-bar d-lg-none ${menuToggle ? 'active' : ''}` }>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+
+
                     </div>
-
-                    {/* sign in and login  */}
-
-
-                    {
-                        !logged && (
-                            <Link to='/login' className='lab-btn me-3 d-none d-md-block'>Login</Link>
-                        )
-                    }
-                    {
-                        logged && (
-                            <>
-                                <button onClick={handleLogout} className='lab-btn me-3 d-none d-md-block'>Logout</button>
-                                <Link to='/cart-page' className='lab-btn me-3 d-none d-md-block'><i className='icofont-cart-alt'></i></Link>
-                            </>
-
-
-                        )
-                    }
-
-                    {/* the menu toggler */}
-                    <div onClick={() => setMenuToggle(!menuToggle)} className={`header-bar d-lg-none ${menuToggle ? 'active' : ''}` }>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-
-                    {/* the social toggler  */}
-                    <div onClick={() => setSocialToggle(!socialToggle)} className='ellepsis-bar d-md-none'>
-                        <i className="icofont-info"></i>
-                    </div>
-
-                </div>
 
                 </div>
             </div>

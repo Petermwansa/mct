@@ -16,23 +16,23 @@ const addressList = [
     },
     {
         iconName: 'icofont-phone',
-        text: ' +880 123 456 789',
+        text: ' +7(904) 640 42 52',
     },
     {
         iconName: 'icofont-envelope',
-        text: ' info@mctelecoms.com',
+        text: ' mctelecoms22@gmail.com',
     },
 ]
 
 const socialList = [
-    {
-        iconName: 'icofont-facebook',
-        siteLink: '#',
-        className: 'facebook',
-    },
+    // {
+    //     iconName: 'icofont-facebook',
+    //     siteLink: '#',
+    //     className: 'facebook',
+    // },
     {
         iconName: 'icofont-instagram',
-        siteLink: '#',
+        siteLink: 'https://www.instagram.com/mc_telecoms?igsh=ODJyYW1vaHZoOHh5',
         className: 'instagram',
     },
 ]
@@ -108,7 +108,7 @@ const Footer = () => {
                                         {
                                             socialList.map((val, i) => (
                                                 <li key={i}>
-                                                    <a href={val.link} className={val.className}><i className={val.iconName}>{val.text}</i></a>
+                                                    <a href={val.siteLink} className={val.className}><i className={val.iconName}>{val.text}</i></a>
                                                 </li>
                                             ))
                                         }
@@ -168,7 +168,7 @@ const Footer = () => {
       <div className='footer-bottom'>
         <div className='container'>
            <div className='section-wrapper'>
-             <p>{year}<Link to='/shop'>MCT</Link>Powered by <a href='https://petermwansa.tech/' target='_blank' rel="noreferrer">Rockie Tech</a></p>
+             <p>{year}<Link to='/'>MCT</Link>Powered by <a href='https://petermwansa.tech/' target='_blank' rel="noreferrer">Rockie Tech</a></p>
              <div className='footer-bottom-list'>
                 {
                     footerbottomList.map((val, i) => (

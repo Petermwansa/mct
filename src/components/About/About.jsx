@@ -2,6 +2,8 @@ import React from 'react';
 import PageHeader from '../PageHeader/PageHeader';
 import logo from '../../assets/images/logo/logo.jpg';
 import './About.css'
+import { Helmet } from 'react-helmet';
+import { Col, Row } from 'react-bootstrap';
 
 
 const subTitle = "About MCT";
@@ -33,42 +35,52 @@ const aboutList = [
 const About = () => {
   return (
     <div className='about-page'>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>MTC - About Page</title>
+                <link rel="canonical" href="#" />
+            </Helmet>
       <PageHeader title="MTC" curPage={'About'}/>
       <div className='about-section style-3 padding-tb section-bg'>
         <div className='row justify-content-center row-cols-xl-2 align-items-center'>
-            <div className='col'>
-                <div className='about-left'>
-                    <div className='about-thumb'>
-                        <img src={logo} alt='the logo' />
-                    </div>
-                    <div className='about-left-content'>
-                        <p>{experience}</p>
-                    </div>
-                </div>
-            </div>
-            <div className='col'>
-                <div className='about-right'>
-                    <div className='section-header'>
-                        <span className='subtitle'>
-                            {subTitle}
-                        </span>
-                        <h2 className='title'>{title}</h2>
-                        <p>{desc}</p>
-                    </div>
-                    <div className='sectgion-wrapper'>
-                        <ul className='lab-ul'>
-                            {
-                                aboutList.map((val) => (
-                                    <li key={val.id}>
-                                        <h5>{val.title}</h5>
-                                        <p>{val.desc}</p>
-                                    </li>
-                                ))
-                            }
-                        </ul>
+            <Row>
+                <Row>
+                    <div className='col'>
+                    <div className='about-left'>
+                        <div className='about-thumb'>
+                            <img src={logo} alt='the logo' />
+                        </div>
                     </div>
                 </div>
-            </div>
+                </Row>
+
+                <Row>
+                    <div className='col'>
+                        <div className='about-right'>
+                            <div className='section-header'>
+                                <span className='subtitle'>
+                                    {subTitle}
+                                </span>
+                                <h2 className='title'>{title}</h2>
+                                <p>{desc}</p>
+                            </div>
+                            <div className='sectgion-wrapper'>
+                                <ul className='lab-ul'>
+                                    {
+                                        aboutList.map((val) => (
+                                            <li key={val.id}>
+                                                <h5>{val.title}</h5>
+                                                <p>{val.desc}</p>
+                                            </li>
+                                        ))
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    </div> 
+                </Row>
+            </Row>
+
         </div>
 
       </div>

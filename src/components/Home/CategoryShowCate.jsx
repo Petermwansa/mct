@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import icon1 from '../../assets/images/shape-img/icon/01.png';
 import icon2 from '../../assets/images/shape-img/icon/02.png';
-import img1 from '../../assets/images/phones/iphone-15.jpeg'
-import img2 from '../../assets/images/laptops/dell.jpeg'
-import img3 from '../../assets/images/watches/2024-05-27 13.30.21.jpg';
-import img4 from '../../assets/images/pencils/2024-05-27 13.31.47.jpg';
+import img1 from '../../assets/images/phones/iphone-14-pro-max.jpeg'
+import img2 from '../../assets/images/laptops/macbook-air.jpg'
+import img3 from '../../assets/images/watches/2024-05-27 13.27.40.jpg';
+import img4 from '../../assets/images/pencils/2024-05-27 13.31.39.jpg';
 import { Link } from 'react-router-dom';
 
 const title = "Our Products";
@@ -13,33 +13,33 @@ const ProductData = [
 {
     imgUrl: img1,
     cate: 'Phones',
-    title: 'iPhone 15',
+    title: 'iPhone 14 Pro Max',
     brand: 'Apple',
-    price: '$199.00',
+    price: '$1130.00',
     id: 1,
 },
 {
     imgUrl: img2,
     cate: 'Laptops',
-    title: 'DELL',
-    brand: 'Dell',
-    price: '$199.00',
+    title: 'MacBook Air 13',
+    brand: 'Apple',
+    price: '$835.00',
     id: 2,
 },
 {
     imgUrl: img3,
     cate: 'Watches',
-    title: 'Apple watch',
+    title: 'Apple watch S9 GPS',
     brand: 'Apple',
-    price: '$199.00',
+    price: '$410.00',
     id: 3,
 },
 {
     imgUrl: img4,
     cate: 'Pencils',
-    title: 'Apple Pencil 1',
+    title: 'Apple Pencil 2',
     brand: 'Apple',
-    price: '$199.00',
+    price: '$120.00',
     id: 4,
 },
 ]

@@ -9,6 +9,8 @@ import image2 from '../../assets/images/icon/02.png'
 import image3 from '../../assets/images/icon/03.png'
 import image4 from '../../assets/images/icon/04.png'
 import GoogleMap from './GoogleMap';
+import { useNavigate } from 'react-router';
+import { Helmet } from 'react-helmet';
 
 const subTitle = "Get in touch with us";
 const title = "We're Always At Your Service";
@@ -29,21 +31,21 @@ const contactList = [
     imgUrl: image2,
     imgAlt: "contact icon",
     title: "Phone number",
-    desc: "+260 0000 00 00",
+    desc: "+7(904) 640 42 52",
     },
     {
     id: 3,
     imgUrl: image3,
     imgAlt: "contact icon",
     title: "Send email",
-    desc: "admin@mct.shop",
+    desc: "mctelecoms22@gmail.com",
     },
     {
     id: 4,
     imgUrl: image4,
     imgAlt: "contact icon",
     title: "Our website",
-    desc: "www.mct.shop",
+    desc: "www.mctelecoms.org",
     },
 ];
 
@@ -52,6 +54,7 @@ const contactList = [
 const Contact = () => {
 
     const form = useRef();
+    const navigate = useNavigate();
 
     // the hook to get hold of the entered data 
     const [input, setInput] = useState({
@@ -83,10 +86,11 @@ const Contact = () => {
         })
         .then(
             () => {
-            console.log('The message has been submitted successfully!');
+                alert("Your message has been sent successfully! We will get back to you as soon as possible");
+                navigate('/#banner')
             },
             (error) => {
-            console.log('Failed to send the message...', error.text);
+                console.log('Failed to send the message...', error.text);
             },
         );
     }
@@ -94,6 +98,11 @@ const Contact = () => {
 
   return (
     <div className='contact-page'>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>MTC - Contact Us</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
       <PageHeader title='Get In Touch' curPage={"Contact Us"}/>
       <div className='map-address-section padding-tb section-bg'>
         <div className='container'>
@@ -154,7 +163,7 @@ const Contact = () => {
                         <input type='text' onChange={(e) => setInput({ ...input, subject: e.target.value})} value={input.subject} name='from_subject' id='subject' placeholder='Subject' required />
                     </div>
                     <div className='form-group w-100'>
-                        <textarea name='message' onChange={(e) => setInput({ ...input, message: e.target.value})} value={input.message} id='message' rows='8' placeholder='Enter your messahe here...'></textarea>
+                        <textarea name='message' onChange={(e) => setInput({ ...input, message: e.target.value})} value={input.message} id='message' rows='8' placeholder='Enter your message here...'></textarea>
                     </div>
                     <div className='form-group w-100 text-center'>
                         <button  type='submit' value="Send" className='lab-btn'>

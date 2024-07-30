@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import productData from '../../products.json';
 import { Link } from 'react-router-dom';
 import SelectedCategory from '../SelectedCategory.jsx/SelectedCategory';
+import { Helmet } from 'react-helmet';
 
 const title = (
     <h2>Search for a product</h2>
@@ -38,7 +39,13 @@ const Banner = () => {
     }
 
   return (
-    <div className='banner-section style-4'>
+    <div className='banner-section style-4' id='banner'>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>MTC - Homepage</title>
+                <meta name='description' content='MC Telecoms - Inspired by you for you.  delivering you the lastest gadgets at affordable prices.' />
+                <link rel="canonical" href="#" />
+            </Helmet>
        <div className='container'>
             <div className='banner-content'>
                 {title}

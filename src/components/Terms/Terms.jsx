@@ -1,10 +1,16 @@
 import React from 'react'
 import PageHeader from '../PageHeader/PageHeader'
 import './Terms.css'
+import { Helmet } from 'react-helmet'
 
 const Terms = () => {
   return (
     <div className='terms-page'>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>MTC - Ts & Cs</title>
+                <link rel="canonical" href="#" />
+            </Helmet>
         <PageHeader title='Terms and Conditions' curPage={"Ts & Cs"}/>
         <div className='terms'>
             <h1 className='terms__title'>MC Telecoms Terms and Conditions</h1>
