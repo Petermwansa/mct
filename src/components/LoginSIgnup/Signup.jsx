@@ -6,7 +6,7 @@ import { doc, getFirestore, setDoc } from 'firebase/firestore';
 
 
 const title = "Signup";
-const socialTitle = "Signup With Social Media";
+const socialTitle = "Signup With Google";
 const buttonText = "Signup Now";
 
 
@@ -148,6 +148,11 @@ const Signup = () => {
 }
 
 export default Signup
+
+
+
+
+
 
 
 

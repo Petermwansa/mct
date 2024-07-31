@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 const title = "Login";
-const socialTitle = "Login With Social Media";
+const socialTitle = "Login With Google";
 const buttonText = "Login Now";
 
 const socialList = [
@@ -83,7 +83,7 @@ const Login = () => {
                       <input type='checkbox' name='remember' id='remember' />
                       <label htmlFor='remember'>Remember Me</label>
                     </div>
-                    <Link to='/forgetpass'>Forget Password?</Link>
+                    {/* <Link to='/forgetpass'>Forget Password?</Link> */}
                   </div>
                 </div>
                 <div className='form-group'>

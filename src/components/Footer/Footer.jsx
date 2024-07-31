@@ -4,8 +4,8 @@ import "./Footer.css"
 
 
 
-const title = "About MTC";
-const desc = "MC TELECOMS: Inspired by you, for you!";
+const title = "About MCT";
+const desc = "MCTELECOMS: Inspired by you, for you!";
 const ItemTitle = "Categories";
 const quickTitle = "Quick Links";
 
