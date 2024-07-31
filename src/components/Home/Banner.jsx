@@ -1,13 +1,16 @@
 import React, { useState } from 'react'
 import productData from '../../products.json';
+import './Home.css';
 import { Link } from 'react-router-dom';
-import SelectedCategory from '../SelectedCategory.jsx/SelectedCategory';
 import { Helmet } from 'react-helmet';
+import logo from '../../assets/images/logo/logo.jpg';
+import { Col, Row } from 'react-bootstrap';
+
 
 const title = (
     <h2>Search for a product</h2>
 )
-const desc = "We have all the accessories that you need";
+const desc = "We have all the gadgets that you need";
 const bannerList = [
     {
         iconName: "icofont-users-alt-4",
@@ -46,26 +49,36 @@ const Banner = () => {
                 <meta name='description' content='MC Telecoms - Inspired by you for you.  delivering you the lastest gadgets at affordable prices.' />
                 <link rel="canonical" href="#" />
             </Helmet>
-       <div className='container'>
-            <div className='banner-content'>
-                {title}
-                <form className=''>
-                    {/* <SelectedCategory select={'all'}/> */}
-                    <input type='text' className='p-4' name='search' id='search' placeholder='search for a product' value={searchInput} onChange={handleSearch}/>
-                    {/* <button type='submit'>
-                    <i className="icofont-search"></i>
-                    </button> */}
-                </form>
-                <p>{desc}</p>
-                <ul className='lab-ul'>
-                    {
-                        searchInput && filteredProducts.map((product, i) => <li key={i}>
-                            <Link to={`/shop/${product.id}`}>{product.name}</Link>
-                        </li>)
-                    }
-                </ul>
-            </div>
-       </div>
+        <Row>
+            <Row>
+                <div className='logo-banner'>
+                    <img src={logo} className='logo-img' alt='the logo image' />
+                </div>
+            </Row>
+            <Row>
+                <div className='container'>
+                    <div className='banner-content'>
+                        {title}
+                        <form className=''>
+                            {/* <SelectedCategory select={'all'}/> */}
+                            <input type='text' className='p-4' name='search' id='search' placeholder='search for a product' value={searchInput} onChange={handleSearch}/>
+                            {/* <button type='submit'>
+                            <i className="icofont-search"></i>
+                            </button> */}
+                        </form>
+                        <p>{desc}</p>
+                        <ul className='lab-ul'>
+                            {
+                                searchInput && filteredProducts.map((product, i) => <li key={i}>
+                                    <Link to={`/shop/${product.id}`}>{product.name}</Link>
+                                </li>)
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </Row>
+        </Row>
+       
     </div>
   )
 }
