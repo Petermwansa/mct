@@ -108,12 +108,6 @@ const Login = () => {
                 <li>
                   <button className='github' onClick={handleRegister}><i className='icofont-github'></i></button>
                 </li>
-                <li>
-                  <a href='/' className='facebook'><i className='icofont-facebook'></i></a>
-                </li>
-                <li>
-                  <a href='/' className='instagram'><i className='icofont-instagram'></i></a>
-                </li>
               </ul>
             </div>
           </div>
