@@ -13,6 +13,7 @@ const addressList = [
     {
         iconName: 'icofont-google-map',
         text: ' Lusaka Zambia.',
+        
     },
     {
         iconName: 'icofont-phone',
@@ -35,6 +36,17 @@ const socialList = [
         siteLink: 'https://www.instagram.com/mc_telecoms?igsh=ODJyYW1vaHZoOHh5',
         className: 'instagram',
     },
+    {
+        iconName: 'icofont-facebook',
+        siteLink: 'https://www.instagram.com/mc_telecoms?igsh=ODJyYW1vaHZoOHh5',
+        className: 'facebook',
+    },
+    {
+        iconName: 'icofont-whatsapp',
+        siteLink: 'https://wa.me/+79046404252',
+        className: 'whatsapp',
+    },
+
 ]
 
 const ItemList = [
