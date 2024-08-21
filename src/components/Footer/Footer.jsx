@@ -38,7 +38,7 @@ const socialList = [
     },
     {
         iconName: 'icofont-facebook',
-        siteLink: 'https://www.instagram.com/mc_telecoms?igsh=ODJyYW1vaHZoOHh5',
+        siteLink: 'https://www.facebook.com/profile.php?id=61564200187763&mibextid=ZbWKwL',
         className: 'facebook',
     },
     {
