@@ -24,6 +24,7 @@ import image19 from '../../assets/images/earphones/airpodsPro.png';
 import image20 from '../../assets/images/earphones/airpodsmax.jpeg';
 import image21 from '../../assets/images/tablets/ipad-10-wifi.jpeg';
 import image22 from '../../assets/images/magsafe/2024-05-27 13.31.13.jpg';
+import image23 from '../../assets/images/watches/2024-09-23 21.41.03.jpg';
 
 import { Helmet } from 'react-helmet';
 
@@ -97,6 +98,19 @@ const Data = [
     quantity: 0
   },
   {
+    id: "124e13b9-2d5a74d-a77b362d6s",
+    category: "Watches",
+    name: "Apple watch S9 GPS Aluminium Case",
+    seller: "Apple",
+    price: 370,
+    stock: 20,
+    ratings: 4,
+    ratingsCount: 3725,
+    img: image23,
+    shipping: 1,
+    quantity: 0
+  },
+  {
     id: "12-4b2f-a74d-a77b362d6ead",
     category: "Watches",
     name: "Apple watch SE 2023",
@@ -137,7 +151,7 @@ const Data = [
   },
   {
     id: "124e1b362d6ead",
-    category: "Watch",
+    category: "Watches",
     name: "Apple Watch",
     seller: "Apple",
     price: 285,
