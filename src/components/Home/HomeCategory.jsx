@@ -21,6 +21,7 @@ const categoryList = [
     iconName: 'icofont-brand-windows',
     title: 'Phones',
 },
+
 {
     id: 'adfefbdfbvdsfjbjbbv',
     imgUrl: image2,
@@ -35,6 +36,7 @@ const categoryList = [
     iconName: 'icofont-brand-windows',
     title: 'Tablets',
 },
+
 {
     id: 'adfefbdbgjbjbj23454kbdfbvdsfbv',
     imgUrl: image4,

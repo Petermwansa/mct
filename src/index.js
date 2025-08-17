@@ -26,6 +26,8 @@ import PrivateRoute from './privateRoute/PrivateRoute';
 import Login from './components/LoginSIgnup/Login';
 import Signup from './components/LoginSIgnup/Signup';
 import Terms from './components/Terms/Terms';
+import AdminLogin from './admin/admin-login';
+import AdminDashboard from './admin/adminDashboard';
 
 
 const router = createBrowserRouter([
@@ -70,8 +72,15 @@ const router = createBrowserRouter([
   {
     path: '/signup',
     element: <Signup />
-  }
-  
+  },
+  {
+    path: '/admin-login',
+    element: <AdminLogin />
+  },
+  {
+    path: '/admin',
+    element: <AdminDashboard />
+  },
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
